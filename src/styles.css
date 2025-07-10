@@ -1,0 +1,80 @@
+@font-face {
+    font-family: "CozetteCrossedSevenVector";
+    src: url("/assets/CozetteCrossedSevenVector.woff") format("woff"),
+        url("/assets/CozetteCrossedSevenVector.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --primary-color: #8b9;
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --font-family: "CozetteCrossedSevenVector", monospace;
+    --font-size: 13px;
+    --font-weight: 10;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center center;
+    background-image: url("/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@keyframes rotate-bg {
+    0% {
+        background-position: center;
+        transform: rotate(0deg);
+    }
+
+    100% {
+        background-position: center;
+        transform: rotate(360deg);
+    }
+}
+
+.main-container {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1rem 5rem;
+}
+
+.ascii-art {
+    background: linear-gradient(to bottom, #99adf4, #5d6996);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    line-height: 1;
+    font-family: monospace;
+}
+
+.title {
+    background: linear-gradient(to right, #99adf4, #f4e99a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.arrow {
+    color: #99adf4;
+}
